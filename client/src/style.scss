@@ -1,0 +1,521 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+   scroll-behavior: smooth;
+   font-family: "Poppins", sans-serif;
+}
+
+$lightGreen: #047857;
+
+.app {
+   display: flex;
+   justify-content: center;
+   .container {
+      width: 1024px;
+      //LOGIN & REGISTER
+      .auth {
+         display: flex;
+         align-items: center;
+         flex-direction: column;
+         justify-content: center;
+         height: 100vh;
+         background-color: $lightGreen;
+         h1 {
+            font-size: 36px;
+            color: white;
+            margin-bottom: 20px;
+         }
+
+         form {
+            display: flex;
+            flex-direction: column;
+            padding: 50px;
+            background-color: white;
+            width: 400px;
+            gap: 20px;
+            border-radius: 10px;
+
+            input {
+               padding: 10px;
+               border: none;
+               border-bottom: 1px solid gray;
+               outline: none;
+            }
+
+            button {
+               padding: 10px;
+               border: none;
+               background-color: teal;
+               color: white;
+               cursor: pointer;
+            }
+
+            p {
+               font-size: 14px;
+               color: red;
+               text-align: center;
+            }
+
+            span {
+               font-size: 14px;
+               text-align: center;
+            }
+         }
+      }
+   }
+}
+
+// NAVBAR
+.navbar {
+   .container {
+      padding: 10px 0px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      .logo {
+         img {
+            width: 80px;
+         }
+      }
+      .links {
+         display: flex;
+         gap: 10px;
+         align-items: center;
+         .write {
+            background-color: #047857;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: 400;
+
+            &:hover {
+               color: black;
+            }
+         }
+         span {
+            cursor: pointer;
+         }
+         .link {
+            text-decoration: none;
+            color: inherit;
+
+            h6 {
+               font-size: 16px;
+               font-weight: 400;
+            }
+         }
+      }
+   }
+}
+
+//FIX LOGIN & REGISTER
+
+.app {
+   display: flex;
+   justify-content: center;
+   .container-2 {
+      width: 19200px;
+      //LOGIN & REGISTER
+      .auth {
+         display: flex;
+         align-items: center;
+         flex-direction: column;
+         justify-content: center;
+         height: 100vh;
+         background-color: $lightGreen;
+         h1 {
+            font-size: 36px;
+            color: white;
+            margin-bottom: 20px;
+         }
+
+         form {
+            display: flex;
+            flex-direction: column;
+            padding: 50px;
+            background-color: white;
+            width: 400px;
+            gap: 20px;
+            border-radius: 10px;
+
+            input {
+               padding: 10px;
+               border: none;
+               border-bottom: 1px solid gray;
+               outline: none;
+            }
+
+            button {
+               padding: 10px;
+               border: none;
+               background-color: teal;
+               color: white;
+               cursor: pointer;
+            }
+
+            p {
+               font-size: 14px;
+               color: red;
+               text-align: center;
+            }
+
+            span {
+               font-size: 14px;
+               text-align: center;
+            }
+         }
+      }
+   }
+}
+
+//FOOTER
+.app-footer {
+   width: 1024px;
+   margin: 0 auto;
+   margin-top: 100px;
+   color: white;
+   border-radius: 10px;
+   background-color: $lightGreen;
+   .container-footer {
+      width: 1024px;
+      padding: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-size: 14px;
+      img {
+         width: 50px;
+      }
+   }
+}
+
+//HOME PAGE
+.home {
+   .posts {
+      margin-top: 50px;
+      display: flex;
+      flex-direction: column;
+      gap: 150px;
+
+      .post {
+         display: flex;
+         gap: 100px;
+
+         &:nth-child(2n + 1) {
+            flex-direction: row-reverse;
+         }
+         .img {
+            flex: 2;
+            position: relative;
+
+            &::after {
+               content: "";
+               width: 100%;
+               height: 100%;
+               background-color: $lightGreen;
+               position: absolute;
+               top: 20px;
+               left: -20px;
+               border-radius: 20px;
+               z-index: -1;
+            }
+
+            img {
+               width: 100%;
+               max-height: 400px;
+               object-fit: cover;
+               border-radius: 20px;
+            }
+         }
+
+         .content {
+            flex: 3;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+
+            h1 {
+               font-size: 48px;
+            }
+
+            p {
+               font-size: 18px;
+            }
+
+            button {
+               width: max-content;
+               padding: 10px 20px;
+               border: none;
+               cursor: pointer;
+               background-color: white;
+               border-radius: 5px;
+               color: $lightGreen;
+               font-weight: 600;
+               border: 2px solid $lightGreen;
+               color: teal;
+
+               &:hover {
+                  border: 2px solid white;
+                  background-color: $lightGreen;
+                  color: black;
+               }
+            }
+         }
+      }
+   }
+}
+
+// SINGLE PAGE
+.single {
+   display: flex;
+   gap: 50px;
+   width: 1024px;
+   margin: 0 auto;
+   .content {
+      flex: 5;
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+      img {
+         width: 100%;
+         height: 300px;
+         object-fit: cover;
+         border-radius: 7px;
+      }
+
+      .user {
+         display: flex;
+         align-items: center;
+         gap: 10px;
+         font-size: 14px;
+         img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            object-fit: cover;
+         }
+
+         span {
+            font-weight: bold;
+         }
+      }
+      .edit {
+         display: flex;
+         gap: 5px;
+
+         img {
+            width: 30px;
+            height: 30px;
+            cursor: pointer;
+         }
+      }
+
+      h1 {
+         font-size: 42px;
+         color: #333;
+      }
+
+      p {
+         text-align: justify;
+         line-height: 30px;
+      }
+   }
+   .menu {
+      flex: 2;
+      display: flex;
+      flex-direction: column;
+      gap: 25px;
+
+      h1 {
+         font-size: 20px;
+         color: #555;
+      }
+
+      .post {
+         display: flex;
+         flex-direction: column;
+         gap: 10;
+
+         img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+         }
+
+         h2 {
+            color: #555;
+            font-size: 20px;
+         }
+
+         .btn-menu {
+            width: max-content;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            background-color: white;
+            border-radius: 5px;
+            color: $lightGreen;
+            font-weight: 600;
+            border: 2px solid $lightGreen;
+            color: teal;
+            margin-top: 20px;
+
+            &:hover {
+               border: 2px solid white;
+               background-color: $lightGreen;
+               color: black;
+            }
+         }
+      }
+   }
+}
+
+// WRITE PAGE
+.writing {
+   width: 1024px;
+   margin: 0 auto;
+   margin-top: 20px;
+   display: flex;
+   gap: 20px;
+
+   .content {
+      flex: 5;
+      display: flex;
+      width: 50%;
+      flex-direction: column;
+      gap: 20px;
+
+      input {
+         padding: 10px;
+         border: 1px solid lightgray;
+         outline: none;
+      }
+
+      .editorContainer {
+         height: 450px;
+         width: 100%;
+         // border: 1px solid lightgray;
+
+         .editor {
+            height: 100%;
+            border: none;
+            outline: none;
+         }
+      }
+   }
+
+   .menu {
+      flex: 2;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+
+      .item {
+         border: 1px solid lightgray;
+         padding: 10px;
+         border-radius: 10px;
+         flex: 1;
+         display: flex;
+         flex-direction: column;
+         font-size: 16px;
+
+         h1 {
+            font-size: 20px;
+         }
+
+         label {
+            padding: 4px 8px;
+            border-radius: 5px;
+            background-color: $lightGreen;
+            max-width: max-content;
+            margin-bottom: 6px;
+            color: white;
+            cursor: pointer;
+            // text-decoration: underline;
+
+            &:hover {
+               text-decoration: underline;
+            }
+         }
+
+         .buttons-save {
+            margin-top: 60px;
+            padding: 4px 8px;
+            border-radius: 5px;
+            // background-color: $lightGreen;
+            max-width: max-content;
+            margin-bottom: 6px;
+            color: $lightGreen;
+            cursor: pointer;
+            outline: none;
+            border: 1px solid $lightGreen;
+            font-size: 16px;
+            margin-right: 8px;
+         }
+
+         .buttons-update {
+            padding: 4px 8px;
+            border-radius: 5px;
+            background-color: $lightGreen;
+            max-width: max-content;
+            margin-bottom: 6px;
+            font-size: 16px;
+            color: white;
+            cursor: pointer;
+            border: none;
+         }
+      }
+      .item2 {
+         border: 1px solid lightgray;
+         padding: 10px;
+         border-radius: 10px;
+         flex: 1;
+         display: flex;
+         flex-direction: column;
+         justify-content: flex-start;
+         font-size: 16px;
+
+         h1 {
+            font-size: 20px;
+         }
+
+         div {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            gap: 10px;
+            color: $lightGreen;
+            font-weight: 600;
+         }
+      }
+   }
+}
+
+
+// DEBUG BUTTON
+.read_more {
+   width: max-content;
+   padding: 10px 20px;
+   border: none;
+   cursor: pointer;
+   background-color: white;
+   border-radius: 5px;
+   color: $lightGreen;
+   font-weight: 600;
+   border: 2px solid $lightGreen;
+   color: teal;
+   text-decoration: none;
+
+   &:hover {
+      border: 2px solid white;
+      background-color: $lightGreen;
+      color: white;
+   }
+}
